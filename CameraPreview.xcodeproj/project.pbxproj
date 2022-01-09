@@ -11,6 +11,9 @@
 		189F5E23278B21B100805E5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F5E22278B21B100805E5D /* ContentView.swift */; };
 		189F5E25278B21B100805E5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189F5E24278B21B100805E5D /* Assets.xcassets */; };
 		189F5E28278B21B100805E5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189F5E27278B21B100805E5D /* Preview Assets.xcassets */; };
+		189F5E32278B220C00805E5D /* MetalViewUI in Frameworks */ = {isa = PBXBuildFile; productRef = 189F5E31278B220C00805E5D /* MetalViewUI */; };
+		189F5E35278B256F00805E5D /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F5E34278B256F00805E5D /* Preview.swift */; };
+		189F5E37278B850F00805E5D /* Passthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F5E36278B850F00805E5D /* Passthrough.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		189F5E22278B21B100805E5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		189F5E24278B21B100805E5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189F5E27278B21B100805E5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		189F5E2F278B21DE00805E5D /* MetalViewUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalViewUI; path = ../MetalViewUI; sourceTree = "<group>"; };
+		189F5E33278B223C00805E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		189F5E34278B256F00805E5D /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		189F5E36278B850F00805E5D /* Passthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passthrough.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189F5E32278B220C00805E5D /* MetalViewUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +43,10 @@
 		189F5E14278B21B100805E5D = {
 			isa = PBXGroup;
 			children = (
+				189F5E2E278B21DE00805E5D /* Packages */,
 				189F5E1F278B21B100805E5D /* CameraPreview */,
 				189F5E1E278B21B100805E5D /* Products */,
+				189F5E30278B220C00805E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +61,13 @@
 		189F5E1F278B21B100805E5D /* CameraPreview */ = {
 			isa = PBXGroup;
 			children = (
+				189F5E33278B223C00805E5D /* Info.plist */,
 				189F5E20278B21B100805E5D /* CameraPreviewApp.swift */,
 				189F5E22278B21B100805E5D /* ContentView.swift */,
 				189F5E24278B21B100805E5D /* Assets.xcassets */,
 				189F5E26278B21B100805E5D /* Preview Content */,
+				189F5E34278B256F00805E5D /* Preview.swift */,
+				189F5E36278B850F00805E5D /* Passthrough.swift */,
 			);
 			path = CameraPreview;
 			sourceTree = "<group>";
@@ -65,6 +78,21 @@
 				189F5E27278B21B100805E5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		189F5E2E278B21DE00805E5D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				189F5E2F278B21DE00805E5D /* MetalViewUI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		189F5E30278B220C00805E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +111,9 @@
 			dependencies = (
 			);
 			name = CameraPreview;
+			packageProductDependencies = (
+				189F5E31278B220C00805E5D /* MetalViewUI */,
+			);
 			productName = CameraPreview;
 			productReference = 189F5E1D278B21B100805E5D /* CameraPreview.app */;
 			productType = "com.apple.product-type.application";
@@ -137,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189F5E37278B850F00805E5D /* Passthrough.swift in Sources */,
 				189F5E23278B21B100805E5D /* ContentView.swift in Sources */,
+				189F5E35278B256F00805E5D /* Preview.swift in Sources */,
 				189F5E21278B21B100805E5D /* CameraPreviewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +305,11 @@
 				DEVELOPMENT_TEAM = 4UA7W8VRF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraPreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -287,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,9 +337,11 @@
 				DEVELOPMENT_TEAM = 4UA7W8VRF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraPreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -317,7 +354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -343,6 +380,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		189F5E31278B220C00805E5D /* MetalViewUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalViewUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 189F5E15278B21B100805E5D /* Project object */;
 }
